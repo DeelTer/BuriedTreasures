@@ -1,4 +1,4 @@
-name: Suspicious Graves
+name: BuriedTreasures
 version: '1.0'
 main: ru.deelter.buriedtreasures.BuriedTreasures
 api-version: '1.20'
