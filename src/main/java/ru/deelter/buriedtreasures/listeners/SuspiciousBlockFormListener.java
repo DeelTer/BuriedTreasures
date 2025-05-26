@@ -34,13 +34,12 @@ public class SuspiciousBlockFormListener implements Listener {
 		maxY = config.getInt("replacement.max-y");
 
 		ConfigurationSection replacementSection = config.getConfigurationSection("replacement.blocks");
-		if (replacementSection == null)
-			return;
-
-		replacementSection.getKeys(false).forEach(key -> blockReplacements.put(
-				Material.getMaterial(key),
-				Material.getMaterial(Objects.requireNonNull(replacementSection.getString(key)))
-		));
+		if (replacementSection != null) {
+			replacementSection.getKeys(false).forEach(key -> blockReplacements.put(
+					Material.getMaterial(key),
+					Material.getMaterial(Objects.requireNonNull(replacementSection.getString(key)))
+			));
+		}
 
 		filterEnabled = config.getBoolean("items.filter-enabled");
 		if (filterEnabled) {
@@ -64,12 +63,8 @@ public class SuspiciousBlockFormListener implements Listener {
 		ItemStack item = entity.getItemStack();
 		Material material = item.getType();
 
-		if (filterEnabled) {
-			if (whitelistMode && !materials.contains(material)) {
-				return;
-			} else if (materials.contains(material)) {
-				return;
-			}
+		if (filterEnabled && ((whitelistMode && !materials.contains(material)) || (!whitelistMode && materials.contains(material)))) {
+			return;
 		}
 
 		Location floorLocation = entity.getLocation().getBlock().getRelative(BlockFace.DOWN).getLocation();
