@@ -1,0 +1,5 @@
+name: Suspicious Graves
+version: '1.0'
+main: ru.deelter.suspiciousgraves.SuspiciousGraves
+api-version: '1.21'
+authors: [ DeelTer ]

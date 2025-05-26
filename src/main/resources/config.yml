@@ -1,0 +1,28 @@
+
+replacement:
+  max-y: 4
+  blocks:
+    GRAVEL: SUSPICIOUS_GRAVEL
+    SAND: SUSPICIOUS_SAND
+    STONE: SUSPICIOUS_GRAVEL
+    DIRT: SUSPICIOUS_GRAVEL
+    COARSE_DIRT: SUSPICIOUS_GRAVEL
+    DEEPSLATE: SUSPICIOUS_GRAVEL
+    COBBLED_DEEPSLATE: SUSPICIOUS_GRAVEL
+    TUFF: SUSPICIOUS_GRAVEL
+    NETHERRACK: SUSPICIOUS_GRAVEL
+  block-faces:
+    - SELF
+    - EAST
+    - SOUTH
+    - NORTH
+    - WEST
+    - NORTH_EAST
+    - NORTH_WEST
+    - SOUTH_EAST
+    - SOUTH_WEST
+
+additions:
+  # Drop chance 0-100%
+  drop-suspicious-chance: 0.3
+  drop-max-ticks-falling: 30
