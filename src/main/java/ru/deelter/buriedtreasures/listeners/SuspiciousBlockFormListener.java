@@ -1,4 +1,4 @@
-package ru.deelter.suspiciousgraves.listeners;
+package ru.deelter.buriedtreasures.listeners;
 
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -14,8 +14,8 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.ItemDespawnEvent;
 import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.NotNull;
-import ru.deelter.suspiciousgraves.SuspiciousGraves;
-import ru.deelter.suspiciousgraves.utils.RandomUtils;
+import ru.deelter.buriedtreasures.BuriedTreasures;
+import ru.deelter.buriedtreasures.utils.RandomUtils;
 
 import java.util.*;
 
@@ -28,7 +28,7 @@ public class SuspiciousBlockFormListener implements Listener {
 	private boolean whitelistMode = false;
 	private final int maxY;
 
-	public SuspiciousBlockFormListener(@NotNull SuspiciousGraves instance) {
+	public SuspiciousBlockFormListener(@NotNull BuriedTreasures instance) {
 		FileConfiguration config = instance.getConfig();
 		config.getStringList("replacement.block-faces").forEach(face -> blockFaces.add(BlockFace.valueOf(face)));
 		maxY = config.getInt("replacement.max-y");

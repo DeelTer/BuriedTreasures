@@ -1,4 +1,4 @@
-package ru.deelter.suspiciousgraves.utils;
+package ru.deelter.buriedtreasures.utils;
 
 import java.util.Random;
 

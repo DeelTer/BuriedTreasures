@@ -1,10 +1,12 @@
-package ru.deelter.suspiciousgraves;
+package ru.deelter.buriedtreasures;
 
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
+import ru.deelter.buriedtreasures.listeners.SuspiciousBlockBreakListener;
+import ru.deelter.buriedtreasures.listeners.SuspiciousBlockFormListener;
 
-public final class SuspiciousGraves extends JavaPlugin {
+public final class BuriedTreasures extends JavaPlugin {
 
 	@Override
 	public void onEnable() {

@@ -22,6 +22,16 @@ replacement:
     - SOUTH_EAST
     - SOUTH_WEST
 
+items:
+  # WHITELIST / BLACKLIST
+  filter-enabled: false
+  mode: BLACKLIST
+  # Material ID's: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
+  materials:
+    - STICK
+    - EGG
+    - GRASS_BLOCK
+
 additions:
   # Drop chance 0-100%
   drop-suspicious-chance: 0.3

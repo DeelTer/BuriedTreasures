@@ -1,4 +1,4 @@
-package ru.deelter.suspiciousgraves.listeners;
+package ru.deelter.buriedtreasures.listeners;
 
 import com.destroystokyo.paper.event.entity.EntityRemoveFromWorldEvent;
 import org.bukkit.NamespacedKey;
@@ -13,8 +13,8 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.persistence.PersistentDataContainer;
 import org.bukkit.persistence.PersistentDataType;
 import org.jetbrains.annotations.NotNull;
-import ru.deelter.suspiciousgraves.SuspiciousGraves;
-import ru.deelter.suspiciousgraves.utils.RandomUtils;
+import ru.deelter.buriedtreasures.BuriedTreasures;
+import ru.deelter.buriedtreasures.utils.RandomUtils;
 
 import java.util.Objects;
 
@@ -24,7 +24,7 @@ public class SuspiciousBlockBreakListener implements Listener {
 	private final double dropBaseChance;
 	private final int dropMaxTicksFalling;
 
-	public SuspiciousBlockBreakListener(@NotNull SuspiciousGraves instance) {
+	public SuspiciousBlockBreakListener(@NotNull BuriedTreasures instance) {
 		FileConfiguration config = instance.getConfig();
 		dropBaseChance = config.getDouble("drops.suspicious-chance");
 		dropMaxTicksFalling = config.getInt("drops.max-ticks-falling");

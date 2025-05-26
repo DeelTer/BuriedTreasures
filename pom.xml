@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>ru.deelter</groupId>
-    <artifactId>SuspiciousGraves</artifactId>
+    <artifactId>Buried Treasures</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>SuspiciousGraves</name>
+    <name>BuriedTreasures</name>
 
     <properties>
         <java.version>21</java.version>
@@ -65,7 +65,7 @@
         <dependency>
             <groupId>io.papermc.paper</groupId>
             <artifactId>paper-api</artifactId>
-            <version>1.21-R0.1-SNAPSHOT</version>
+            <version>1.20-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
