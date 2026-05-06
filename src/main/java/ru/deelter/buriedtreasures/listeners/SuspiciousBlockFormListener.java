@@ -24,7 +24,7 @@ public class SuspiciousBlockFormListener implements Listener {
 	private final Map<Material, Material> blockReplacements = new HashMap<>();
 	private final List<BlockFace> blockFaces = new ArrayList<>();
 	private final List<Material> materials = new ArrayList<>();
-	private boolean filterEnabled = false;
+	private final boolean filterEnabled;
 	private boolean whitelistMode = false;
 	private final int maxY;
 
@@ -57,8 +57,7 @@ public class SuspiciousBlockFormListener implements Listener {
 	@EventHandler(ignoreCancelled = true, priority = EventPriority.HIGH)
 	public void onDespawnItem(@NotNull ItemDespawnEvent event) {
 		Item entity = event.getEntity();
-		if (entity.isVisualFire())
-			return;
+		if (entity.isVisualFire()) return;
 
 		ItemStack item = entity.getItemStack();
 		Material material = item.getType();
@@ -68,16 +67,17 @@ public class SuspiciousBlockFormListener implements Listener {
 		}
 
 		Location floorLocation = entity.getLocation().getBlock().getRelative(BlockFace.DOWN).getLocation();
-
 		List<Block> blocks = new ArrayList<>();
 
 		for (int i = 0; i < maxY; i++) {
-			if (!blocks.isEmpty())
+			if (!blocks.isEmpty()) {
 				break;
+			}
 			for (BlockFace blockFace : blockFaces) {
 				Block block = floorLocation.getBlock().getRelative(blockFace);
-				if (!isBlockValid(block))
+				if (!isBlockValid(block)) {
 					continue;
+				}
 				blocks.add(block);
 			}
 			floorLocation.subtract(0, 1, 0);

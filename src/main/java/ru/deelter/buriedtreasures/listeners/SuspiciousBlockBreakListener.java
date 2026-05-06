@@ -44,7 +44,6 @@ public class SuspiciousBlockBreakListener implements Listener {
 			return;
 		if (item.getType().isAir())
 			return;
-
 		if (!(event.getEntity() instanceof FallingBlock fallingBlock))
 			return;
 
